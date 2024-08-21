@@ -1,4 +1,4 @@
-import Product from "../models/produtModel.js";
+import Product from "../models/productModel.js";
 import mongoose from "mongoose";
 
 export const getProducts = async (req, res) => {
@@ -35,7 +35,7 @@ export const updateProduct = async (req, res) => {
 	const product = req.body;
 
 	if (!mongoose.Types.ObjectId.isValid(id)) {
-		return res.status(404).json({ success: false, message: "Invalid Product Id" });
+		return res.status(404).json({ success: false, message: "Invalid Product Id is found" });
 	}
 
 	try {
